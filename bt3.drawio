@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-14T04:38:16.452Z" agent="RikkeiTool" version="24.0.0">
+  <diagram id="Page-1" name="Sơ đồ Activity Diagram TO-BE Tối ưu Hóa Luồng POS Doanh Thu Ca Làm Việc">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Bắt đầu ca" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#27ae60;strokeColor=#2ecc71;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="378" y="50" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="nhap_n" value="Nhập tổng số giao dịch N" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="140" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_n" value="Kiểm tra N &lt;= 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="230" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="err_n" value="In thông báo lỗi N" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="140" y="320" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="end_fail" value="Kết thúc ca lỗi" style="ellipse;html=1;shape=endState;fillColor=#e74c3c;strokeColor=#c0392b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="410" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_init" value="Khởi tạo vòng lặp for i từ 1 đến N" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="500" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_check" value="Kiểm tra i &lt;= N?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="590" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="finish" value="Kết thúc ca thành công &amp; In tổng doanh thu" style="ellipse;html=1;shape=endState;fillColor=#e74c3c;strokeColor=#c0392b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="378" y="680" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="input_gd" value="Đọc mã đồ uống, size, topping, thẻ gold" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="770" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_ngat" value="Mã đồ uống == -1?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="860" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="check_first" value="Kiểm tra i == 1?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="950" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="reset_0" value="Doanh thu ca bằng 0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1040" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="break_ca" value="Thực hiện break ngắt khẩn cấp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1130" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_huy" value="Mã đồ uống == 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="1220" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cont_huy" value="Thực hiện continue bỏ qua giao dịch hủy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1310" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_rac" value="Mã không thuộc -1, 0, 1, 2, 3?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="1400" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cont_rac" value="Thực hiện continue bỏ qua mã rác" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1490" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_st" value="Size không hợp lệ hoặc Topping ngoài 0-5?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="1580" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cont_st" value="Thực hiện continue bỏ qua lỗi hệ thống" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1670" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="tinh_tien" value="Tính tổng tiền = Base + Size + Topping" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1760" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_gold" value="Thẻ Gold == 1?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="1850" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="giam_gia" value="Giảm giá 10% chuẩn số nguyên" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1940" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="giu_nguyen" value="Giữ nguyên giá gốc" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="2030" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="cong_dt" value="Cộng dồn vào biến tổng doanh thu ca" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="2120" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="next_step" value="Tăng i thêm 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="2210" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="start" target="nhap_n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="nhap_n" target="check_n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" value="Đúng (N &lt;= 0)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_n" target="err_n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="err_n" target="end_fail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_4" value="Sai (N &gt; 0)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_n" target="loop_init">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="loop_init" target="loop_check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_6" value="Sai (Hết vòng lặp)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="loop_check" target="finish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_7" value="Đúng (Còn giao dịch)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="loop_check" target="input_gd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="input_gd" target="check_ngat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_9" value="Đúng (Mã == -1)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_ngat" target="check_first">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_10" value="Đúng (i == 1)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_first" target="reset_0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="reset_0" target="break_ca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_12" value="Sai (i &gt; 1)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_first" target="break_ca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="break_ca" target="finish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_14" value="Sai (Mã != -1)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_ngat" target="check_huy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_15" value="Đúng (Mã == 0)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_huy" target="cont_huy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="cont_huy" target="next_step">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_17" value="Sai (Mã != 0)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_huy" target="check_rac">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_18" value="Đúng (Mã rác)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_rac" target="cont_rac">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="cont_rac" target="next_step">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_20" value="Sai (Mã hợp lệ)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_rac" target="check_st">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_21" value="Đúng (Size/Topping lỗi)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_st" target="cont_st">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="cont_st" target="next_step">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_23" value="Sai (Size/Topping chuẩn)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_st" target="tinh_tien">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="tinh_tien" target="check_gold">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_25" value="Đúng (Có thẻ Gold)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_gold" target="giam_gia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_26" value="Sai (Không có thẻ Gold)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_gold" target="giu_nguyen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="giam_gia" target="cong_dt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="giu_nguyen" target="cong_dt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="cong_dt" target="next_step">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="next_step" target="loop_check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
